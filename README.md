@@ -30,7 +30,7 @@ AIを仕事で安定して使うための「入口設計」「記録」「状態
 https://github.com/aiuex0000/ai_ops_showcase
 次の手順で回答してください。
 
-1. まず README.md と summary_for_small_models.md を読む
+1. まず README.md を読む
 2. 読めたファイル名を最初に列挙する
 3. この repo が何を工夫している資料かを初心者向けに説明する
 4. 推測は禁止
