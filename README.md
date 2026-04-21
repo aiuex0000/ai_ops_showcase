@@ -24,37 +24,24 @@ AIを仕事で安定して使うための「入口設計」「記録」「状態
 
 このフォルダや Git の URL を `ChatGPT` `Gemini` `Codex` `Claude` などの AI に渡して、説明や要約の補助に使って大丈夫です。
 
-| 聞きたいこと | AI への頼み方の例 |
-| --- | --- |
-| まず全体像を知りたい | `このフォルダを3分で要約して` |
-| Web 制作者向けに説明してほしい | `Web 制作が分かる人向けに、この構成の意味を説明して` |
-| 自分の環境へ移植したい | `この構成を自分の作業環境へ移植するなら、どこから真似するとよいか教えて` |
 
-よりまとまった prompt 集は [ask_ai.md](./ask_ai.md) に置いています。
+```text
 
+https://github.com/aiuex0000/ai_ops_showcase
+次の手順で回答してください。
+
+1. まず README.md と summary_for_small_models.md を読む
+2. 読めたファイル名を最初に列挙する
+3. この repo が何を工夫している資料かを初心者向けに説明する
+4. 推測は禁止
+5. 読めなかった場合は「要約不能」とだけ答える
+6. 「AIの健康診断」「モデル劣化監視」「安全なデプロイ」「ロールバック」は、ファイル内に明記がある場合のみ触れる
+7. 最後に、根拠として参照したファイル名を3〜5個列挙する
+```
 ## この文面について
 
 この showcase の整理、構成づくり、文面化にも **Codex（GPT）** を使っています。  
 ただし、元になっているのは実際に回している repo 運用で、内容は人間が見直しながら整えています。AI に丸投げした紹介文ではなく、**運用の実態を AI と一緒に再編集した資料** です。
-
-## すぐ使える prompt
-
-非技術寄りの説明が欲しい時:
-
-```text
-このフォルダ（または Git URL）を読んで、AI 運用に詳しくない人向けに、
-何を工夫している資料なのかをやさしく説明してください。
-専門用語は減らし、仕事でどう役立つのかを中心にまとめてください。
-```
-
-Web 制作者向けに噛み砕きたい時:
-
-```text
-このフォルダ（または Git URL）を読んで、
-Web 制作は分かるけれど AI 運用の裏側には詳しくない人向けに説明してください。
-source-of-truth と runtime surface の違い、
-skills / workflows / state / archive / guardrails の役割も整理してください。
-```
 
 ## 一目で分かる構成
 
@@ -65,7 +52,7 @@ skills / workflows / state / archive / guardrails の役割も整理してくだ
 | Skills / Workflows | 反復作業を再利用可能な単位へ切り分ける | `skills_index.sample.md` / `daily_report_workflow.sample.md` |
 | State / Archive | 現在地の保持と、後から戻れる記録層 | `current_state.sample.md` / `daily_report_workflow.sample.md` |
 | Guardrails | 壊れやすいポイントの点検 | `check_workspace_harness.sample.ps1` |
-| Knowledge Loops | 失敗パターンや確認済み事実をテーマ別に蓄積する | `operating_model.md`（第 8 章） |
+| Knowledge Loops | 失敗パターンや確認済み事実をテーマ別に蓄積する | `operating_model.md` |
 | Obsidian Integration | AI ログ・日報を Vault へ自動書き出しする | `archive_to_report_flow.md` / `daily_report_workflow.sample.md` |
 
 ```mermaid
@@ -92,7 +79,6 @@ flowchart TD
 | 読む人 | おすすめの入口 |
 | --- | --- |
 | まず人間がざっくり理解したい | この `README.md` → [operating_model.md](./operating_model.md) |
-| AI に先に説明させたい | この `README.md` → [ask_ai.md](./ask_ai.md) |
 | 用語から詰まる | [glossary.md](./glossary.md) |
 | 運用の進化や比較から見たい | [check_script_evolution.md](./check_script_evolution.md) / [archive_to_report_flow.md](./archive_to_report_flow.md) |
 | sample を先に見たい | `samples/` 配下 |
