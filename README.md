@@ -22,7 +22,7 @@ AIを仕事で安定して使うための「入口設計」「記録」「状態
 - ロールバック
 ## AI に見せるなら
 
-このフォルダや Git の URL を `ChatGPT` `Gemini` `Codex` `Claude` などの AI に渡して、説明や要約の補助に使って大丈夫です。
+このフォルダや Git の URL を `ChatGPT` `Copilot` `Claude` などの AI に渡して、説明や要約の補助に使って大丈夫です。（`Gemini` はリポジトリの読み取りに未対応のようです……）
 
 
 ```text
